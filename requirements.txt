@@ -1,0 +1,12 @@
+black
+click
+einops
+hydra-core
+matplotlib
+numpy
+wandb
+pytest
+python-dotenv
+torch
+requests
+tqdm
