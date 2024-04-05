@@ -2,16 +2,17 @@ import torch
 from torch import nn
 from torch import optim
 from torch.utils.data import DataLoader
-from data import FashionDataset
+from ml_pipeline.data import FashionDataset
 from tqdm import tqdm
-from utils import Stage
+from ml_pipeline.common import Stage
 
 
 class Batch:
     def __init__(
         self,
         stage: Stage,
-        model: nn.Module, device,
+        model: nn.Module,
+        device,
         loader: DataLoader,
         optimizer: optim.Optimizer,
         criterion: nn.Module,

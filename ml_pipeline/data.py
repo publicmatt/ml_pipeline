@@ -64,8 +64,7 @@ class FashionDataset(Dataset):
 
 
 @click.group()
-def cli():
-    ...
+def cli(): ...
 
 
 @cli.command()

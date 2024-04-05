@@ -6,9 +6,9 @@ main class for building a DL pipeline.
 from accelerate import Accelerator
 from torch.utils.data import DataLoader
 from torch.optim import AdamW
-from data import GenericDataset
-from model.linear import DNN
-from runner import Runner
+from ml_pipeline.data import GenericDataset
+from ml_pipeline.model.linear import DNN
+from ml_pipeline.runner import Runner
 import click
 
 
@@ -19,10 +19,9 @@ def cli():
 
 @cli.command()
 def train():
-
     # Initialize hyperparameters
     hidden_size = 128
-    epochs = 1000
+    epochs = 10
     batch_size = 10
     lr = 0.001
 
@@ -51,10 +50,9 @@ def train():
 
     # Train the model
     for _ in range(epochs):
-
         # Run one loop of training and record the average loss
-        train_stats = runner.next()
-        print(f"{train_stats}")
+        for step in runner.step():
+            print(f"{step}")
 
 
 if __name__ == "__main__":
