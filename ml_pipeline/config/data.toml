@@ -1,0 +1,4 @@
+[data]
+train_path = "/path/to/data/mnist_train.csv"
+in_channels = 1
+num_classes = 10

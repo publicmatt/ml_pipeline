@@ -1,0 +1,3 @@
+[model]
+hidden_size = 8
+name = 'vgg11'

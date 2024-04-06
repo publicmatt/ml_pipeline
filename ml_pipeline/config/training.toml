@@ -1,0 +1,8 @@
+[training]
+batch_size = 16
+epochs = 10
+learning_rate = 0.01
+device = 'cpu'
+# examples = 50
+examples = -1
+
